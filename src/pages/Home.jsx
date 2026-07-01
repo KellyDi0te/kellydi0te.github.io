@@ -3,9 +3,11 @@ import Manifesto from '../components/Manifesto.jsx'
 import EpochSection from '../components/EpochSection.jsx'
 import Quiz from '../components/Quiz.jsx'
 import Booking from '../components/Booking.jsx'
+import usePageTitle from '../hooks/usePageTitle.js'
 import { destinations } from '../data/destinations.js'
 
 export default function Home() {
+  usePageTitle()
   return (
     <main>
       <HeroScroll />

@@ -1,6 +1,7 @@
 import { useParams, Link, Navigate } from 'react-router-dom'
 import Img from '../components/Img.jsx'
 import Reveal from '../components/Reveal.jsx'
+import usePageTitle from '../hooks/usePageTitle.js'
 import { destinations, order } from '../data/destinations.js'
 
 const spans = ['md:col-span-3', 'md:col-span-3', 'md:col-span-4', 'md:col-span-2']
@@ -8,6 +9,7 @@ const spans = ['md:col-span-3', 'md:col-span-3', 'md:col-span-4', 'md:col-span-2
 export default function Destination() {
   const { slug } = useParams()
   const data = destinations[slug]
+  usePageTitle(data?.title)
   if (!data) return <Navigate to="/" replace />
 
   const idx = order.indexOf(slug)
