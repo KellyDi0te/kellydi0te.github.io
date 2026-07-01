@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Le Cretace - TimeTravel Agency</title>
+<meta name="description" content="Le Cretace : Faune colossale, forets vierges, observatoires blindes au coeur d'un monde d'avant l'homme. L'aventure absolue, en securite totale." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,500,700,800&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = { theme: { extend: {
+    fontFamily: { display:['"Cabinet Grotesk"','system-ui','sans-serif'], sans:['Outfit','system-ui','sans-serif'] },
+    colors: { void:'#0b0a09', char:'#141210', surface:'#1b1815', cream:'#f2eee7', ash:'#a49d90', ash2:'rgba(242,238,231,.12)', gold:'#cba35c', gold2:'#e3c589' },
+    letterSpacing: { tightest:'-0.03em' },
+  } } };
+</script>
+<style>
+  body { font-family:'Outfit',sans-serif; color:#f2eee7; background:#0b0a09; -webkit-font-smoothing:antialiased; }
+  .font-display { font-family:'Cabinet Grotesk',system-ui,sans-serif; }
+  .grain { position:fixed; inset:0; pointer-events:none; z-index:70; opacity:.05; mix-blend-mode:soft-light;
+    background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+  .link-underline { position:relative; }
+  .link-underline::after { content:''; position:absolute; left:0; right:100%; bottom:-2px; height:1px; background:currentColor; transition:right .4s cubic-bezier(.16,1,.3,1); }
+  .link-underline:hover::after { right:0; }
+  .btn-primary { background:#cba35c; color:#181206; transition:transform .25s cubic-bezier(.16,1,.3,1), background .25s; }
+  .btn-primary:hover { background:#e3c589; } .btn-primary:active { transform:translateY(1px) scale(.99); }
+  .btn-ghost { border:1px solid rgba(242,238,231,.15); color:#f2eee7; transition:.25s cubic-bezier(.16,1,.3,1); }
+  .btn-ghost:hover { border-color:#cba35c; color:#e3c589; }
+  .reveal { opacity:0; transform:translateY(28px); transition:opacity .8s cubic-bezier(.16,1,.3,1), transform .8s cubic-bezier(.16,1,.3,1); }
+  .reveal.in { opacity:1; transform:none; }
+  .dhero img { transform:scale(1.06); transition:transform 1.6s cubic-bezier(.16,1,.3,1); }
+  .dhero.in img { transform:scale(1); }
+  @media (prefers-reduced-motion:reduce){ *{transition:none!important} .reveal{opacity:1;transform:none} }
+</style>
+</head>
+<body class="font-sans">
+<div class="grain"></div>
+
+<header class="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-void/70 border-b border-ash2">
+  <div class="max-w-[1400px] mx-auto px-6 lg:px-10 h-16 flex items-center justify-between">
+    <a href="../index.html" class="flex items-center gap-3">
+      <span class="w-9 h-9 rounded-lg border border-gold bg-gold/15 text-gold grid place-items-center font-display font-800">T</span>
+      <span class="font-display font-700 text-lg tracking-tightest">TimeTravel</span>
+    </a>
+    <nav class="hidden lg:flex items-center gap-9 text-sm text-ash">
+      <a href="paris-1889.html" class="link-underline hover:text-cream transition-colors">Paris 1889</a>
+      <a href="cretace.html" class="link-underline hover:text-cream transition-colors">Cretace</a>
+      <a href="florence-1504.html" class="link-underline hover:text-cream transition-colors">Florence 1504</a>
+    </nav>
+    <a href="../index.html#reserver" class="btn-primary px-5 py-2.5 text-sm rounded-full inline-flex items-center gap-2 font-display font-500">
+      Reserver <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+  </div>
+</header>
+
+<main>
+<!-- HERO -->
+<section class="dhero relative min-h-[100dvh] flex items-end overflow-hidden">
+  <div class="absolute inset-0 -z-10">
+    <img src="https://picsum.photos/seed/cretaceous-jungle-dinosaurs-prehistoric/1920/1200" alt="Le Cretace" class="w-full h-full object-cover" />
+    <div class="absolute inset-0 bg-gradient-to-t from-void via-void/50 to-void/30"></div>
+  </div>
+  <div class="max-w-[1400px] mx-auto px-6 lg:px-10 w-full pb-20 lg:pb-28">
+    <a href="../index.html" class="inline-flex items-center gap-2 text-sm text-ash hover:text-cream transition-colors mb-8">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+      Toutes les destinations
+    </a>
+    <div class="font-display font-800 text-[clamp(4rem,16vw,13rem)] leading-[.8] tracking-tightest text-transparent [-webkit-text-stroke:1px_rgba(203,163,92,.45)] mb-4">-65M</div>
+    <div class="text-xs uppercase tracking-[0.24em] text-gold mb-4">Nature primitive</div>
+    <h1 class="font-display font-700 text-5xl lg:text-8xl tracking-tightest leading-none mb-6">Le Cretace</h1>
+    <p class="text-lg lg:text-xl text-cream/80 max-w-[52ch] leading-relaxed">Faune colossale, forets vierges, observatoires blindes au coeur d'un monde d'avant l'homme. L'aventure absolue, en securite totale.</p>
+  </div>
+</section>
+
+<!-- OVERVIEW -->
+<section class="py-24 lg:py-36">
+  <div class="max-w-[1400px] mx-auto px-6 lg:px-10 grid grid-cols-12 gap-8 lg:gap-16">
+    <div class="col-span-12 lg:col-span-4">
+      <div class="lg:sticky lg:top-28 reveal">
+        <div class="text-xs uppercase tracking-[0.2em] text-gold mb-6">L'epoque</div>
+        <h2 class="font-display font-500 text-4xl lg:text-5xl leading-[.95] tracking-tightest">Le dernier grand monde sauvage.</h2>
+      </div>
+    </div>
+    <div class="col-span-12 lg:col-span-7 lg:col-start-6 space-y-10 reveal">
+      <p class="text-2xl lg:text-3xl font-display font-400 leading-snug tracking-tight text-cream/90">A la fin du Cretace, la Terre appartient aux geants. Forets denses, fleuves immenses, ciels traverses de pterosaures. Depuis nos observatoires blindes, vous approchez la vie prehistorique sans jamais la perturber.</p>
+      <div class="grid grid-cols-3 gap-6 pt-8 border-t border-ash2">
+        <div><div class="font-display text-3xl lg:text-4xl tracking-tightest text-gold2">0</div><div class="mt-2 text-sm text-ash leading-relaxed">empreinte laissee : protocole de non-interference absolu</div></div>
+        <div><div class="font-display text-3xl lg:text-4xl tracking-tightest text-gold2">24h</div><div class="mt-2 text-sm text-ash leading-relaxed">de faune observable, coupoles panoramiques</div></div>
+        <div><div class="font-display text-3xl lg:text-4xl tracking-tightest text-gold2">5j</div><div class="mt-2 text-sm text-ash leading-relaxed">d'expedition, escorte renforcee</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HIGHLIGHTS -->
+<section class="py-8 lg:py-16">
+  <div class="max-w-[1400px] mx-auto px-6 lg:px-10">
+    <div class="mb-12 reveal">
+      <div class="text-xs uppercase tracking-[0.2em] text-gold mb-4">Temps forts</div>
+      <h2 class="font-display font-500 text-4xl lg:text-6xl tracking-tightest leading-none">Ce que vous vivrez.</h2>
+    </div>
+    <div class="grid md:grid-cols-6 gap-4">
+      <article class="md:col-span-3 relative min-h-[300px] rounded-xl overflow-hidden border border-ash2 flex items-end group">
+        <img src="https://picsum.photos/seed/cretaceous-dinosaurs-herd-safari/900/700" alt="Safari des geants" class="absolute inset-0 w-full h-full object-cover -z-10 transition-transform duration-700 group-hover:scale-105" />
+        <div class="absolute inset-0 -z-10 bg-gradient-to-t from-void via-void/40 to-transparent"></div>
+        <div class="p-7">
+          <h3 class="font-display font-500 text-2xl tracking-tightest mb-2">Safari des geants</h3>
+          <p class="text-sm text-cream/75 max-w-[38ch]">Observez troupeaux d'herbivores et grands predateurs depuis un vehicule blinde silencieux.</p>
+        </div>
+      </article>
+      <article class="md:col-span-3 relative min-h-[300px] rounded-xl overflow-hidden border border-ash2 flex items-end group">
+        <img src="https://picsum.photos/seed/cretaceous-night-dome-jungle/900/700" alt="Coupole nocturne" class="absolute inset-0 w-full h-full object-cover -z-10 transition-transform duration-700 group-hover:scale-105" />
+        <div class="absolute inset-0 -z-10 bg-gradient-to-t from-void via-void/40 to-transparent"></div>
+        <div class="p-7">
+          <h3 class="font-display font-500 text-2xl tracking-tightest mb-2">Coupole nocturne</h3>
+          <p class="text-sm text-cream/75 max-w-[38ch]">Nuit sous un dome transparent, au son de la foret primitive.</p>
+        </div>
+      </article>
+      <article class="md:col-span-4 relative min-h-[300px] rounded-xl overflow-hidden border border-ash2 flex items-end group">
+        <img src="https://picsum.photos/seed/cretaceous-river-prehistoric-water/900/700" alt="Rivieres primitives" class="absolute inset-0 w-full h-full object-cover -z-10 transition-transform duration-700 group-hover:scale-105" />
+        <div class="absolute inset-0 -z-10 bg-gradient-to-t from-void via-void/40 to-transparent"></div>
+        <div class="p-7">
+          <h3 class="font-display font-500 text-2xl tracking-tightest mb-2">Rivieres primitives</h3>
+          <p class="text-sm text-cream/75 max-w-[38ch]">Descente encadree au milieu d'une faune aquatique disparue.</p>
+        </div>
+      </article>
+      <article class="md:col-span-2 relative min-h-[300px] rounded-xl overflow-hidden border border-ash2 flex items-end group">
+        <img src="https://picsum.photos/seed/cretaceous-pterosaurs-sky-sunset/900/700" alt="Ciel de pterosaures" class="absolute inset-0 w-full h-full object-cover -z-10 transition-transform duration-700 group-hover:scale-105" />
+        <div class="absolute inset-0 -z-10 bg-gradient-to-t from-void via-void/40 to-transparent"></div>
+        <div class="p-7">
+          <h3 class="font-display font-500 text-2xl tracking-tightest mb-2">Ciel de pterosaures</h3>
+          <p class="text-sm text-cream/75 max-w-[38ch]">Au crepuscule, le vol des grands reptiles volants au-dessus de la canopee.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ITINERAIRE -->
+<section class="py-24 lg:py-36">
+  <div class="max-w-[1400px] mx-auto px-6 lg:px-10 grid grid-cols-12 gap-8 lg:gap-16">
+    <div class="col-span-12 lg:col-span-4 reveal">
+      <div class="text-xs uppercase tracking-[0.2em] text-gold mb-6">Itineraire</div>
+      <h2 class="font-display font-500 text-4xl lg:text-5xl tracking-tightest leading-[.95] mb-6">5 jours au coeur de l'Histoire.</h2>
+      <p class="text-ash leading-relaxed max-w-[38ch]">Chaque journee est orchestree par un conseiller historien. Rythme ajustable selon vos envies.</p>
+    </div>
+    <div class="col-span-12 lg:col-span-7 lg:col-start-6 reveal">
+      <div class="divide-y divide-ash2 border-y border-ash2">
+        <div class="py-7 flex gap-6">
+          <div class="font-display text-xl tracking-tightest text-gold w-16 shrink-0">J01</div>
+          <div>
+            <h3 class="font-display text-xl font-500 tracking-tight mb-1">Briefing et deploiement</h3>
+            <p class="text-ash leading-relaxed max-w-[52ch]">Formation securite, equipement, installation dans la base-observatoire blindee.</p>
+          </div>
+        </div>
+        <div class="py-7 flex gap-6">
+          <div class="font-display text-xl tracking-tightest text-gold w-16 shrink-0">J02</div>
+          <div>
+            <h3 class="font-display text-xl font-500 tracking-tight mb-1">Grande plaine</h3>
+            <p class="text-ash leading-relaxed max-w-[52ch]">Journee d'observation des grands troupeaux depuis les miradors panoramiques.</p>
+          </div>
+        </div>
+        <div class="py-7 flex gap-6">
+          <div class="font-display text-xl tracking-tightest text-gold w-16 shrink-0">J03</div>
+          <div>
+            <h3 class="font-display text-xl font-500 tracking-tight mb-1">Foret dense</h3>
+            <p class="text-ash leading-relaxed max-w-[52ch]">Approche encadree de la canopee et de sa faune, en vehicule silencieux.</p>
+          </div>
+        </div>
+        <div class="py-7 flex gap-6">
+          <div class="font-display text-xl tracking-tightest text-gold w-16 shrink-0">J04</div>
+          <div>
+            <h3 class="font-display text-xl font-500 tracking-tight mb-1">Riviere et crepuscule</h3>
+            <p class="text-ash leading-relaxed max-w-[52ch]">Descente fluviale puis observation du vol des pterosaures au coucher du soleil.</p>
+          </div>
+        </div>
+        <div class="py-7 flex gap-6">
+          <div class="font-display text-xl tracking-tightest text-gold w-16 shrink-0">J05</div>
+          <div>
+            <h3 class="font-display text-xl font-500 tracking-tight mb-1">Extraction</h3>
+            <p class="text-ash leading-relaxed max-w-[52ch]">Derniere veille a l'aube, puis retour securise a l'instant de depart.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALERIE -->
+<section class="py-8 lg:py-16">
+  <div class="max-w-[1400px] mx-auto px-6 lg:px-10">
+    <div class="mb-12 reveal">
+      <div class="text-xs uppercase tracking-[0.2em] text-gold mb-4">Galerie</div>
+      <h2 class="font-display font-500 text-4xl lg:text-6xl tracking-tightest leading-none">Un avant-gout.</h2>
+    </div>
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 reveal">
+      <div class="aspect-square rounded-xl overflow-hidden border border-ash2">
+        <img src="https://picsum.photos/seed/cretace-g1/700/700" alt="" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+      </div>
+      <div class="aspect-square rounded-xl overflow-hidden border border-ash2">
+        <img src="https://picsum.photos/seed/cretace-g2/700/700" alt="" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+      </div>
+      <div class="aspect-square rounded-xl overflow-hidden border border-ash2">
+        <img src="https://picsum.photos/seed/cretace-g3/700/700" alt="" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+      </div>
+      <div class="aspect-square rounded-xl overflow-hidden border border-ash2">
+        <img src="https://picsum.photos/seed/cretace-g4/700/700" alt="" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INCLUS + CTA -->
+<section class="py-24 lg:py-32 bg-char border-y border-ash2">
+  <div class="max-w-[1400px] mx-auto px-6 lg:px-10 grid lg:grid-cols-12 gap-12">
+    <div class="lg:col-span-5 reveal">
+      <div class="text-xs uppercase tracking-[0.2em] text-gold mb-6">Compris dans le voyage</div>
+      <ul class="space-y-4 text-cream/85">
+        <li class="flex gap-3"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#cba35c" stroke-width="1.8" class="shrink-0 mt-0.5"><path d="M20 6L9 17l-5-5"/></svg><span>Transfert temporel securise aller-retour</span></li>
+        <li class="flex gap-3"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#cba35c" stroke-width="1.8" class="shrink-0 mt-0.5"><path d="M20 6L9 17l-5-5"/></svg><span>Escorte renforcee et guide paleontologue</span></li>
+        <li class="flex gap-3"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#cba35c" stroke-width="1.8" class="shrink-0 mt-0.5"><path d="M20 6L9 17l-5-5"/></svg><span>Combinaisons et equipement de protection</span></li>
+        <li class="flex gap-3"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#cba35c" stroke-width="1.8" class="shrink-0 mt-0.5"><path d="M20 6L9 17l-5-5"/></svg><span>Base-observatoire blindee tout confort</span></li>
+        <li class="flex gap-3"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#cba35c" stroke-width="1.8" class="shrink-0 mt-0.5"><path d="M20 6L9 17l-5-5"/></svg><span>Tous les repas et veilles encadrees</span></li>
+        <li class="flex gap-3"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#cba35c" stroke-width="1.8" class="shrink-0 mt-0.5"><path d="M20 6L9 17l-5-5"/></svg><span>Assurance temporelle tous risques</span></li>
+      </ul>
+    </div>
+    <div class="lg:col-span-6 lg:col-start-7 reveal">
+      <div class="bg-surface border border-ash2 rounded-2xl p-8 lg:p-10">
+        <div class="flex items-end justify-between mb-6 pb-6 border-b border-ash2">
+          <div>
+            <div class="text-sm text-ash mb-1">a partir de</div>
+            <div class="font-display text-4xl lg:text-5xl tracking-tightest text-gold">68 000 EUR</div>
+          </div>
+          <div class="text-right text-sm text-ash">5 jours<br/>tout compris</div>
+        </div>
+        <p class="text-ash leading-relaxed mb-8">Destination a escorte renforcee. Aptitude physique legere requise. Non-interference garantie par notre protocole breveté.</p>
+        <a href="../index.html#reserver" class="btn-primary w-full py-4 rounded-full font-display font-500 inline-flex items-center justify-center gap-2">
+          Reserver cette epoque
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <div class="mt-6 flex items-center justify-between text-sm">
+          <a href="paris-1889.html" class="text-ash hover:text-cream link-underline transition-colors">< Paris 1889</a>
+          <a href="florence-1504.html" class="text-ash hover:text-cream link-underline transition-colors">Florence 1504 ></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="py-14">
+  <div class="max-w-[1400px] mx-auto px-6 lg:px-10 flex flex-col md:flex-row justify-between gap-4 text-xs text-ash">
+    <a href="../index.html" class="flex items-center gap-3">
+      <span class="w-8 h-8 rounded-lg border border-gold bg-gold/15 text-gold grid place-items-center font-display font-800 text-sm">T</span>
+      <span class="font-display font-700 tracking-tightest text-cream">TimeTravel</span>
+    </a>
+    <span>Projet pedagogique M1/M2 Digital &amp; IA. Visuels et prix illustratifs.</span>
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver((es)=>es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} }),{threshold:.15});
+  document.querySelectorAll('.reveal,.dhero').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
